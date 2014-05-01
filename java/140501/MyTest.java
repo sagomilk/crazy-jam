@@ -1,10 +1,13 @@
-// 5
 import java.awt.*;
 
+// 6
+
+
+
 public class MyTest {
-	public static void main(String[] args) {
-		Frame w = new Frame();		
-		w.setSize(200, 300);
+	public static void main(String[] args){
+		Frame w = new Frame();
+		w.setSize(300, 400);
 		
 		MyPanel mp = new MyPanel();
 		w.add(mp);
@@ -16,7 +19,8 @@ public class MyTest {
 class MyPanel extends Panel {
 	public void paint(Graphics g){
 		g.setColor(Color.BLUE);
-		g.fillOval(20, 20 ,100, 100);
-		g.drawLine(20, 20, 300, 300);
+		g.fillOval(30, 30, 50, 20);
+		g.drawLine(10, 10, 400, 400);
 	}
 }
+
