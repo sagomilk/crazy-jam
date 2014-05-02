@@ -1,7 +1,7 @@
 package ball;
 import java.awt.*;
 
-//2
+//3
 
 public class MyBall {
 	public static void main(String[] args) {
@@ -10,7 +10,6 @@ public class MyBall {
 		
 		MyPanel mp = new MyPanel();
 		w.add(mp);
-		
 		
 		Thread t = new Thread(mp);
 		t.start();
@@ -22,16 +21,68 @@ public class MyBall {
 class MyPanel extends Panel implements Runnable{
 	int x = 30;
 	int y = 30;
+	int att = 0;
+	Color color = Color.black;
 	public void paint(Graphics g) {
-		g.fillOval(x, y, 20, 20);
+		g.setColor(color);
+		g.fillOval(x, y, 30, 30);
 	}
 	
 	public void run() {
-
 		while (true) {
-			y++;
-			if (y > 400) {
-				y = 0;
+			if (x > 263) {
+				if (att == 0) {
+					att = 1;
+				} else {
+					att = 2;
+				}
+			}
+			if (y > 450) {
+				if (att == 1) {
+					att = 2;
+				} else {
+					att = 3;
+				}
+			}
+			
+			if (x < 0) {
+				if (att == 2) {
+					att = 3;
+				} else {
+					att = 0;
+				}
+			}
+			
+			if (y < 0) {
+				if (att == 3) {
+					att = 0;
+				} else {
+					att = 1;
+				}
+			}
+			
+			if (att == 0) {
+				color = Color.BLACK;
+				x++;
+				y++;
+			}
+			
+			if (att == 1) {
+				color = Color.RED;
+				x--;
+				y++;
+			}
+			
+			if (att == 2) {
+				color = Color.GREEN;
+				x--;
+				y--;
+			}
+			
+			if (att == 3) {
+				color = Color.YELLOW;
+				x++;
+				y--;
 			}
 			
 			try {
@@ -39,8 +90,8 @@ class MyPanel extends Panel implements Runnable{
 			} catch (Exception e) {
 				
 			}
+			
 			repaint();
 		}
-		
 	}
 }
