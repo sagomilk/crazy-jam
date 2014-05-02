@@ -2,7 +2,7 @@ package snow;
 
 import java.awt.*;
 /*
- * 漫天的雪花飘落
+ * 漫天的雪花飘落2
  */
 
 public class MySnow {
@@ -11,14 +11,12 @@ public class MySnow {
 		w.setSize(800, 600);
 		w.setBackground(Color.BLACK);
 		
-		
 		MyPanel mp = new MyPanel();
 		w.add(mp);
 		
 		Thread t = new Thread(mp);
 		t.start();
 		
-				
 		w.show();
 	}
 }
@@ -39,30 +37,23 @@ class MyPanel extends Panel implements Runnable {
 		
 		for (int i = 0; i < 300; i++) {
 			g.drawString("*", x[i], y[i]);
-		}		
-		
+		}
 	}
 	
 	public void run() {
-		
 		while (true) {
-			
 			for (int i = 0; i < 300; i++) {
-				y[i] += 5*Math.random();
-				x[i] = x[i]+(int)(2*Math.random())-(int)(2*Math.random());
+				y[i]++;
 				
 				if (y[i] > 600) {
-					x[i] = (int)(800*Math.random());
-					y[i] = (int)(100*Math.random());
+					y[i] = 0;
 				}
 			}
-			
-
 			
 			try {
 				Thread.sleep(100);
 			} catch (Exception e) {
-				
+				// pass
 			}
 			
 			repaint();
