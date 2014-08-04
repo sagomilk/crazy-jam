@@ -104,6 +104,7 @@ public class Encrypt {
 	public static void main(String[] args) {
 		Encrypt e = new Encrypt();
 
+		// 简单逻辑判断，参数不符合要求直接退出
 		if (args.length != 2) {
 			System.out.println("args number unmatch 2");
 			return;
@@ -112,6 +113,9 @@ public class Encrypt {
 		String param = args[0];
 		String path = args[1];
 
+		// 目前支持2种参数
+		// -e 加密
+		// -d 解密
 		if (param.equalsIgnoreCase("-e")) {
 			e.encrypt(path);
 		} else if (param.equalsIgnoreCase("-d")) {
