@@ -1,0 +1,117 @@
+<html lang="zh-cn"><head>
+  <meta charset="utf-8">
+  <title>Headroom.js playground</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body class="language-javascript">
+
+<header id="header" class="header headroom header--fixed hide-from-print  " role="banner">
+  <div class="container">    
+    <a href="../" class="brand header__link">
+      <b class="brand__forename">Headroom</b><b class="brand__surname">.js</b>
+    </a>
+  </div>
+</header>
+
+<article>
+<header class="feature"></header>
+
+<div class="container block main" role="main">  
+  
+
+  <form class="form">
+    <fieldset class="question-set">
+      <legend class="question-set__title">
+        <h3>参数</h3>
+      </legend>
+      <div class="grid">
+        <div class="grid__item one-half">
+          <label class="question-set__label question-set__label--block" for="offset">偏移</label>
+          <input class="question-set__input" type="number" name="offset" id="offset" value="5">
+        </div>
+        <div class="grid__item one-half">
+          <label class="question-set__label question-set__label--block" for="tolerance">容差</label>
+          <input class="question-set__input" type="number" name="tolerance" id="tolerance" value="5">
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="question-set push--remove-bottom">
+      <legend class="question-set__title">
+        <h3>样式</h3>
+      </legend>
+      <div class="grid">
+        <div class="grid__item one-half lap--one-quarter">
+          <label class="question-set__label" for="slide">
+            <input type="radio" id="slide" value="slide" name="style" checked="checked"> Slide</label>
+        </div>
+        <div class="grid__item one-half lap--one-quarter">
+          <label class="question-set__label" for="swing">
+            <input type="radio" id="swing" value="swing" name="style"> Swing</label>
+        </div>
+        <div class="grid__item one-half lap--one-quarter">
+          <label class="question-set__label" for="flip">
+            <input type="radio" id="flip" value="flip" name="style"> Flip</label>
+        </div>
+        <div class="grid__item one-half lap--one-quarter">
+          <label class="question-set__label" for="bounce">
+            <input type="radio" id="bounce" value="bounce" name="style"> Bounce</label>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+  
+  
+<pre class=" widget-code  language-javascript"><span class="token keyword">var</span> headroom <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Headroom</span><span class="token punctuation">(</span>elem<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token string">"tolerance"</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+  <span class="token string">"offset"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">"classes"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"initial"</span><span class="token punctuation">:</span> <span class="token string">"animated"</span><span class="token punctuation">,</span>
+    <span class="token string">"pinned"</span><span class="token punctuation">:</span> <span class="token string">"bounceInDown"</span><span class="token punctuation">,</span>
+    <span class="token string">"unpinned"</span><span class="token punctuation">:</span> <span class="token string">"bounceOutUp"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+headroom<span class="token punctuation">.</span><span class="token function">init<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// to destroy
+</span>headroom<span class="token punctuation">.</span><span class="token function">destroy<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre>
+
+  
+
+
+<pre class=" plugin-code  language-javascript">$<span class="token punctuation">(</span><span class="token string">"header"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">headroom<span class="token punctuation">(</span></span><span class="token punctuation">{</span>
+  <span class="token string">"tolerance"</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+  <span class="token string">"offset"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">"classes"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"initial"</span><span class="token punctuation">:</span> <span class="token string">"animated"</span><span class="token punctuation">,</span>
+    <span class="token string">"pinned"</span><span class="token punctuation">:</span> <span class="token string">"bounceInDown"</span><span class="token punctuation">,</span>
+    <span class="token string">"unpinned"</span><span class="token punctuation">:</span> <span class="token string">"bounceOutUp"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// to destroy
+</span>$<span class="token punctuation">(</span><span class="token string">"#header"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">headroom<span class="token punctuation">(</span></span><span class="token string">"destroy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre>
+  
+
+
+
+
+  
+<pre class=" data-api-code  language-javascript"><span class="token operator">&lt;</span>header data<span class="token operator">-</span>headroom data<span class="token operator">-</span>tolerance<span class="token operator">=</span><span class="token string">"5"</span> data<span class="token operator">-</span>offset<span class="token operator">=</span><span class="token string">"1"</span> data<span class="token operator">-</span>classes<span class="token operator">=</span><span class="token string">'{"initial":"animated","pinned":"bounceInDown","unpinned":"bounceOutUp"}'</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>header<span class="token operator">&gt;</span>
+<span class="token comment" spellcheck="true">
+// to destroy, in your JS:
+</span>$<span class="token punctuation">(</span><span class="token string">"header"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">data<span class="token punctuation">(</span></span><span class="token string">"headroom"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">destroy<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre>
+
+  
+
+</div>
+</article>
+
+<script src="./js/main.js"></script>
+<script src="./js/jquery.min.js"></script>
+
+</body></html>
+
