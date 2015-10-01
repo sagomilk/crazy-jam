@@ -1,0 +1,5 @@
+D:\CSharpWorkspace\WebServiceSample\WebServiceSample\bin\WebServiceSample.dll
+D:\CSharpWorkspace\WebServiceSample\WebServiceSample\bin\WebServiceSample.pdb
+D:\CSharpWorkspace\WebServiceSample\WebServiceSample\obj\Debug\WebServiceSample.dll
+D:\CSharpWorkspace\WebServiceSample\WebServiceSample\obj\Debug\WebServiceSample.pdb
+D:\CSharpWorkspace\WebServiceSample\WebServiceSample\obj\Debug\WebServiceSample.csprojResolveAssemblyReference.cache

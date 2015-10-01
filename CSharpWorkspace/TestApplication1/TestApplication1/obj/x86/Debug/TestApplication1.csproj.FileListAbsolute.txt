@@ -1,0 +1,5 @@
+D:\CSharpWorkspace\TestApplication1\TestApplication1\bin\Debug\TestApplication1.exe
+D:\CSharpWorkspace\TestApplication1\TestApplication1\bin\Debug\TestApplication1.pdb
+D:\CSharpWorkspace\TestApplication1\TestApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\CSharpWorkspace\TestApplication1\TestApplication1\obj\x86\Debug\TestApplication1.exe
+D:\CSharpWorkspace\TestApplication1\TestApplication1\obj\x86\Debug\TestApplication1.pdb
