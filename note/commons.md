@@ -1,6 +1,12 @@
 #commons
 
-#commons
+Apache Commons项目由三部分组成：
+
+The Commons Proper - 已经发布过的)
+The Commons Sandbox - 正在开发的项目
+The Commons Dormant - 非活动状态的组件库，刚启动或者已经停止维护的项目
+
+我们一般所指的commons是指 proper中的commons项目。
 
 ##commons-lang
 
